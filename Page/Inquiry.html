@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Inquiry - Charity 2024</title>
+
+
+ <link rel="stylesheet" href="../CSS/Style.css">
+ <link rel="stylesheet" href="../CSS/Inquiry.css">
+  
+<body>
+<!-- Banner -->
+		<section class="banner">
+			<h1>Welcome to Charity 2024</h1>
+		</section>
+
+        <!-- CSS riêng của trang -->
+
+<!-- Header -->
+		<header class="header">
+<!-- Logo and company -->
+			<div class="logo-section">
+				<img src="../IMG/Home/Logo.jpg" alt="Logo" width="30" >
+				<div class="logo-text">Conquering New Heights</div>
+			</div>
+			
+<!-- Menu -->
+			<nav class="navbar">
+				<ul class="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Page/Event.html" >Program Events</a></li>
+                <li><a href="../Page/General-intro.html">General Information</a></li>
+                <li><a href="../Page/General-intro.html">Participation Information</a></li>
+                <li><a href="../Page/About us.html">About Us</a></li>
+                <li><a href="../Page/Inquiry.html" class="active">Inquiry</a></li>
+				</ul>
+			</nav>
+		</header>
+
+<!-- Enquiry Form -->
+			<form id="enquiryForm">
+				<div class="form-group">
+					<label for="name">Full Name:</label>
+					<input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" placeholder="Enter Correct Email Format" required>
+				</div>
+
+				<div class="form-group">
+					<label for="event">Interested Event:</label>
+					<select id="event" name="event" required>
+						<option value="">Select Your Interested Event</option>
+						<option value="Charity Run 2024">Charity Run 2024</option>
+						<option value="Opening Ceremony">Opening Ceremony</option>
+						<option value="Side Activities: Health Consultation and Reading Corner">Side Activities: Health Consultation and Reading Corner</option>
+						<option value="Award Ceremony for Top Achievers">Award Ceremony for Top Achievers</option>
+						<option value="Inauguration of the Small Library at the Elementary School">Inauguration of the Small Library at the Elementary School</option>
+					</select>
+				</div>
+
+				<label>Category of Enquiry:</label>
+				<div class="form-group">
+					<input type="checkbox" id="join" name="join">
+					<label for="join">To Join</label>
+				</div>
+
+				<div class="form-group">
+					<input type="checkbox" id="eventActivities" name="category" value="Event Activities">
+					<label for="eventActivities">Event Activities</label>
+				</div>
+
+				<div class="form-group">
+					<input type="checkbox" id="registrationFees" name="category" value="Registration Fees">
+					<label for="registrationFees">Registration Fees</label>
+				</div>
+
+				<div class="form-group">
+					<input type="checkbox" id="rules" name="rules" name="category" value="Rules & Guidelines">
+					<label for="rules">Rules & Guidelines</label>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Detailed Enquiry:</label>
+					<textarea id="message" name="message" rows="5" placeholder="Type here...." required></textarea>
+				</div>
+
+				<div class="form-group">
+					<button type="button" onclick="displayData()">SUBMIT</button>
+					<button type="reset">CANCEL</button>
+				</div>
+			</form>
+
+<!-- Result-->
+			<div class="result" id="resultDiv">
+				<h2>Congratulation...!!!</h2>
+				<p><b>Name:</b> <span id="resultName"></span></p>
+				<p><b>Email:</b> <span id="resultEmail"></span></p>
+				<p><b>Interested Event:</b> <span id="resultEvent"></span></p>
+				<p><b>Detailed Enquiry:</b> <span id="resultMessage"></span></p>
+			</div>
+
+			<script>
+				function displayData() {
+					// form
+					var name = document.getElementById('name').value;
+					var email = document.getElementById('email').value;
+					var event = document.getElementById('event').value;
+					var message = document.getElementById('message').value;
+
+					// Check
+					if (name && email && event && message) {
+						// Displey
+						document.getElementById('resultName').textContent = name;
+						document.getElementById('resultEmail').textContent = email;
+						document.getElementById('resultEvent').textContent = event;
+						document.getElementById('resultMessage').textContent = message;
+
+						// 
+						document.getElementById('enquiryForm').style.display = 'none';
+						document.getElementById('resultDiv').style.display = 'block';
+					} else {
+						alert("PLEASE ENTER THE VALUES!.");
+					}
+				}
+			</script>
+
+<!-- Footer -->
+		<footer class="footer">
+			<p>&copy; 2024 Charity Run. All Rights Reserved.</p>
+			<p>Saigon Exhibition and Convention Center (SECC), Ho Chi Minh City, Vietnam</p>
+			<p>Email: info@charityrun2024.com | Phone: +84 123 456 789</p>
+			
+			<div class="social-media">
+				<a href="https://www.facebook.com/sportforcharities/" target="_blank">Facebook</a> |
+				<a href="https://www.instagram.com/sportforcharity/" target="_blank">Instagram</a> |
+				<a href="https://x.com/charitysports" target="_blank">Twitter</a>
+			</div>
+
+            <script src="../Script/Inquiry.js"></script>
+            <script src="../Script/Script.js"></script>
+		</footer>
+</body>
+</head>

@@ -1,0 +1,58 @@
+/* Banner */
+.banner {
+  background-image: url('../IMG/Home/Banner.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.banner h1 { font-size: 64px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin: 0; }
+.banner p { font-size: 22px; text-shadow: 2px 2px 10px rgba(0,0,0,0.45); margin-top: 10px; }
+
+/* Event information */
+.event-info { padding: 48px 20px; background-color: transparent; text-align: center; }
+.event-info h2 { font-size: 36px; margin-bottom: 20px; }
+.event-info p { font-size: 18px; margin: 0 auto; max-width: 900px; }
+
+/* Carousel: đảm bảo không bị collapse nếu ảnh chưa có */
+.carousel { min-height: 280px; background: rgba(0,0,0,0.03); margin-top: 20px; }
+.carousel-inner { display: block; }
+.carousel-item { min-height: 280px; display: flex; align-items: center; justify-content: center; }
+.carousel-item img { width: 100%; max-height: 420px; object-fit: cover; }
+
+/* Statistics */
+.statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 24px;
+  background-color: #fff;
+  margin-top: 18px;
+}
+.stat-item { text-align: center; }
+.stat-number { font-size: 48px; font-weight: 700; color: #e63946; margin: 0; }
+.stat-label { font-size: 16px; color: #333; margin-top: 8px; }
+
+/* Events section */
+.container h2 { margin-top: 24px; color: #e10d0d; }
+.events { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; margin-top: 12px; }
+.event-link { text-decoration: none; color: inherit; width: calc(33.333% - 12px); }
+.event { background-color: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; transition: transform .25s ease; }
+.event:hover { transform: translateY(-6px); }
+.event img { width: 100%; height: 150px; object-fit: cover; }
+.event-info { padding: 12px 14px; }
+.event-info h3 { font-size: 1.1rem; color: #1a73e8; margin: 8px 0; }
+.btn { background-color: #007bff; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+
+/* Logo slider */
+.logo-slider { overflow: hidden; width: 100%; background-color: #f9f9f9; padding: 20px 0; margin-top: 18px; }
+.logo-track { display: flex; width: calc(100% * 2); animation: scroll 20s linear infinite; align-items: center; }
+.logo { flex: 0 0 16.666%; display:flex; justify-content:center; align-items:center; padding: 8px;}
+.logo img { max-width: 100px; height: auto; display:block; }
+@keyframes scroll { 0% { transform: translateX(0);} 100% { transform: translateX(-50%);} }
